@@ -6,18 +6,10 @@
   <title>Soulsync</title>
 
   <style>
-    body {<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soulsync</title>
-
-  <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f172a;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: white;
     }
 
@@ -25,49 +17,97 @@
       scroll-behavior: smooth;
     }
 
+    /* NAV */
     .nav {
       display: flex;
       justify-content: space-between;
       padding: 20px 40px;
-      background: #0b1220;
+      background: rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-weight: bold;
+      color: #38bdf8;
+      font-size: 20px;
     }
 
     .nav a {
       color: white;
-      margin-left: 15px;
+      margin-left: 20px;
       text-decoration: none;
+      opacity: 0.8;
     }
 
-    .logo {
-      color: #38bdf8;
-      font-weight: bold;
+    .nav a:hover {
+      opacity: 1;
     }
 
-    .container {
-      padding: 80px 20px;
+    /* HERO */
+    .hero {
       text-align: center;
+      padding: 120px 20px;
     }
 
-    h1 {
-      font-size: 40px;
+    .hero h1 {
+      font-size: 55px;
       color: #38bdf8;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: auto;
+      color: #cbd5e1;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
+      margin-top: 25px;
+      padding: 12px 28px;
       background: #38bdf8;
       color: black;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+      transform: scale(1.05);
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      margin: 10px;
+      display: inline-block;
+      width: 220px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.3);
+      color: #94a3b8;
     }
   </style>
 </head>
 
 <body>
 
+  <!-- NAV -->
   <div class="nav">
     <div class="logo">Soulsync</div>
     <div>
@@ -77,26 +117,32 @@
     </div>
   </div>
 
-  <div class="container" id="home">
+  <!-- HERO -->
+  <div class="hero" id="home">
     <h1>Soulsync 🚀</h1>
-    <p>Your AI-powered system for building smart digital experiences.</p>
+    <p>AI-powered platform built to help you connect, automate, and create smarter digital experiences.</p>
     <a class="btn" href="#about">Get Started</a>
   </div>
 
-  <div class="container" id="about">
+  <!-- ABOUT -->
+  <div class="section" id="about">
     <h2>About Soulsync</h2>
-    <p>We help you turn ideas into real digital products.</p>
+    <p>We turn ideas into digital systems using smart AI tools and automation.</p>
   </div>
 
-  <div class="container" id="features">
+  <!-- FEATURES -->
+  <div class="section" id="features">
     <h2>Features</h2>
-    <p>⚡ Fast AI tools</p>
-    <p>🤖 Smart automation</p>
-    <p>🌐 Modern design</p>
+
+    <div class="card">⚡ Fast AI Tools</div>
+    <div class="card">🤖 Automation</div>
+    <div class="card">🌐 Modern Design</div>
   </div>
 
-</body>
-</html>
-      
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Soulsync | Built by Eric Kinyua
+  </footer>
+
 </body>
 </html>
